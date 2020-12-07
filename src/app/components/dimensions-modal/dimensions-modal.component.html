@@ -1,0 +1,10 @@
+<h1>Passenden Reifendimensionen auswählen:</h1>
+
+<mat-form-field appearance="fill">
+  <mat-label>Reifendimensionen auswählen</mat-label>
+  <mat-select [(value)]="selectedDimension" (selectionChange)="setSelectedDimension($event.value)">
+    <mat-option *ngFor="let dimension of dimensions" [value]="dimension">
+      {{dimension}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>

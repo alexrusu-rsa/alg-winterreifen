@@ -1,10 +1,28 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { DimensionsModalComponent } from './components/dimensions-modal/dimensions-modal.component';
 
 @Component({
-  selector: 'app-root',
+  selector: 'alg-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.sass']
+  styleUrls: ['./app.component.sass'],
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'dummy';
+
+  constructor(public dialog: MatDialog) {}
+
+  ngOnInit(): void {
+    this.openDialog();
+  }
+
+  openDialog(): void {
+    const dialogRef = this.dialog.open(DimensionsModalComponent, {
+      data: { dialogRef: this.dialog }
+    });
+
+    dialogRef.afterClosed().subscribe(() => {
+      console.log('The dialog was closed');
+    });
+  }
 }

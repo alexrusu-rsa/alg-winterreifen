@@ -6,8 +6,7 @@
 */
 {
   "files": [],
-  "references": [
-    {
+  "references": [{
       "path": "./tsconfig.app.json"
     },
     {
@@ -16,5 +15,33 @@
     {
       "path": "./e2e/tsconfig.json"
     }
-]
+  ],
+  "compileOnSave": true,
+  "compilerOptions": {
+    "moduleResolution": "node",
+    "target": "ESNext",
+    "noEmitHelpers": true,
+    "lib": [
+      "esnext",
+      "dom"
+    ],
+    "outDir": "../dist",
+    "sourceMap": true,
+    "allowSyntheticDefaultImports": true,
+    "noUnusedLocals": true,
+    "resolveJsonModule": true,
+    "noUnusedParameters": true,
+    "skipLibCheck": true,
+    "baseUrl": "./",
+    "paths": {
+      "@client": ["./"],
+      "@client/*": ["./*"],
+      "@shared/*": [
+        "../../../shared/*"
+      ],
+      "@templates/*": [
+        "./globalTemplates/*"
+      ]
+    }
+  }
 }

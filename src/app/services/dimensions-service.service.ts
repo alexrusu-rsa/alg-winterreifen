@@ -1,14 +1,19 @@
 import { dimensionsMock } from './../mock/dimensions-mock';
 import { Injectable } from '@angular/core';
+import { BehaviorSubject, Observable, Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class DimensionsServiceService {
   private dimensions: string[];
-  selectedDimension: string;
+  private selectedDimensionChange: BehaviorSubject<string>;
+  selectedDimension: Observable<string>;
+
   constructor() {
     this.dimensions = dimensionsMock;
+    this.selectedDimensionChange = new BehaviorSubject(null);
+    this.selectedDimension = this.selectedDimensionChange.asObservable();
   }
 
   getDimensions(): string[] {
@@ -16,7 +21,10 @@ export class DimensionsServiceService {
   }
 
   setSelectedDimension(selectedDimension: string): void {
-    this.selectedDimension = selectedDimension;
-    console.log('Changed ', selectedDimension, ' was selected');
+    this.selectedDimensionChange.next(selectedDimension);
+  }
+
+  getSelectedDimension(): Observable<string> {
+    return this.selectedDimension;
   }
 }

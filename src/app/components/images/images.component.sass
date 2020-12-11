@@ -7,19 +7,21 @@
     display: grid
     grid-template-rows: 100%
     grid-template-columns: 50% 50%
-    width: 100%
+    width: 80%
     height: 80%
     margin: auto
 
   .left
     grid-row: 1
     grid-column: 1
-    display: block
+    display: flex
     float: right
+    justify-content: center
 
     img
       object-fit: contain
-      max-height: 100%
+      margin: auto
+      max-height: 80%
       float: right
 
   .right

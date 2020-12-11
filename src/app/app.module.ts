@@ -9,6 +9,7 @@ import { MaterialModule } from './ng-modules/material/material.module';
 import { CarHeaderComponent } from './components/car-header/car-header.component';
 import { CarHeaderMidComponent } from './components/car-header-mid/car-header-mid.component';
 import { CarHeaderLastComponent } from './components/car-header-last/car-header-last.component';
+import { DimensionsHeaderComponent } from './components/dimensions-header/dimensions-header.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { CarHeaderLastComponent } from './components/car-header-last/car-header-
     DimensionsModalComponent,
     CarHeaderComponent,
     CarHeaderMidComponent,
-    CarHeaderLastComponent
+    CarHeaderLastComponent,
+    DimensionsHeaderComponent
   ],
   imports: [
     BrowserModule,

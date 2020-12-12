@@ -13,7 +13,7 @@ const MaterialComponents = [
   MatButtonModule,
   MatSelectModule,
   MatFormFieldModule,
-  MatDividerModule,
+  MatDividerModule
 ];
 
 @NgModule({

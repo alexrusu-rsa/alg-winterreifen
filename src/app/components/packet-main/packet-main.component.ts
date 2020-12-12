@@ -9,6 +9,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class PacketMainComponent implements OnInit {
   @Input()
   packet: Packet;
+  opacity;
 
   constructor() {}
 

@@ -1,8 +1,28 @@
 :host
-  height: 100%
-  display: block
-  width: 100%
-  background: #F6F6F6
+
+  .parent
+    height: 100%
+    display: block
+    width: 100%
+    background: #F6F6F6
+    overflow: hidden
+    border-radius: 30px
+    position: inherit
+
+  .circle
+    position: relative
+    z-index: 1
+    top: -9%
+    align-content: center
+    border-radius: 50%
+    padding: 10%
+    width: 3%
+    background: white
+    text-align: center
+    border: 8px solid #023899
+    align-self: center
+    margin: auto
+
   .mat-divider
     border-top: 5px solid #023899
     height: 10px
@@ -48,7 +68,7 @@
 .footer
   color: #023899
   width: 100%
-  height: 20%
+  height: 15%
   display: grid
   grid-template-rows: 90% 10%
   grid-template-columns: 100%
@@ -66,3 +86,7 @@
     text-align: right
     margin-left: 25%
     margin-right: 25%
+
+.extra-footer
+  height: auto
+  width: 100%

@@ -14,6 +14,7 @@ import { DimensionsHeaderComponent } from './components/dimensions-header/dimens
 import { PacketMainComponent } from './components/packet-main/packet-main.component';
 import { ImagesComponent } from './components/images/images.component';
 import { PacketsComponent } from './components/packets/packets.component';
+import { ButtonsComponent } from './components/buttons/buttons.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { PacketsComponent } from './components/packets/packets.component';
     PacketMainComponent,
     ImagesComponent,
     PacketsComponent,
+    ButtonsComponent,
   ],
   imports: [
     BrowserModule,

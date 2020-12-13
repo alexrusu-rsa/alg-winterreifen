@@ -1,27 +1,28 @@
+@import '_global'
 :host
   height: 10%
-  width: 80%
+  width: $global-side-wrapper-width
   margin: auto
   margin-top: 4%
   display: block
   div
-    width: 100%
+    width: $global-width-full
     height: 60%
     display: flex
     justify-content: center
 
     button
       width: 48%
-      height: 100%
+      height: $global-height-full
       margin: auto
 
     button:nth-child(1)
-      background: #023899
-      color: white
+      background: $global-color-blue-contrast
+      color: $global-color-white
       margin-left: 0
 
     button:nth-child(2)
-      background: #54B179
-      color: white
+      background: $global-color-green
+      color: $global-color-white
       font-weight: bold
       margin-right: 0

@@ -1,25 +1,26 @@
+@import '_global'
 :host
-  width: 80%
+  width: $global-side-wrapper-width
   height: 60%
   display: block
   margin: auto
   margin-top: 2%
 
   .title
-    width: 100%
+    width: $global-width-full
     margin: auto
     h1
-      color: #023899
+      color: $global-color-blue-text
       font-size: 50px
       font-weight: bold
 
   .main
     display: grid
-    width: 100%
+    width: $global-width-full
     height: 90%
     margin: auto
-    grid-template-rows: 100%
-    grid-template-columns: 33.33% 33.33% 33.33%
+    grid-template-rows: $global-height-full
+    grid-template-columns: $global-three-equal-columns
 
   .pack:hover
     opacity: 1
@@ -29,7 +30,7 @@
 
   .pack
     opacity: 0.3
-    height: 100%
+    height: $global-height-full
     width: 80%
     margin: auto
     object-fit: contain

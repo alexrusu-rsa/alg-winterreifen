@@ -1,15 +1,17 @@
+@import '_global'
+
 :host
   .parentSelected
-    border: 5px solid #023899
+    border: 5px solid $global-color-blue-contrast
 
   .parent:hover
-    border: 5px solid #023899
+    border: 5px solid $global-color-blue-contrast
 
   .parent
-    height: 100%
+    height: $global-height-full
     display: block
-    width: 100%
-    background: #F6F6F6
+    width: $global-width-full
+    background: $global-color-gray-contrast
     overflow: hidden
     border-radius: 30px
     position: inherit
@@ -24,15 +26,15 @@
     width: 3%
     background: white
     text-align: center
-    border: 8px solid #023899
+    border: 8px solid $global-color-blue-contrast
     align-self: center
     margin: auto
 
   .circleSelected
-    border: 8px solid #54B179 !important
+    border: 8px solid $global-color-green !important
 
   .check
-    color: #54B179
+    color: $global-color-green
     font-weight: bold
     font-size: 50px
     text-align: center
@@ -41,13 +43,13 @@
     margin-left: -20%
 
   .mat-divider
-    border-top: 5px solid #023899
+    border-top: 5px solid $global-color-blue-contrast
     height: 10px
 
 .header
-  background: #023899
-  color: white
-  width: 100%
+  background: $global-color-blue-contrast
+  color: $global-color-white
+  width: $global-width-full
   height: 15%
   display: block
   align-content: center
@@ -65,7 +67,7 @@
     margin: auto
 
 .main
-  color: black
+  color: $global-color-black
   display: block
   align-content: center
   width: 80%
@@ -75,7 +77,7 @@
   .description
     font-size: 18px
     font-weight: bold
-    color: #023899
+    color: $global-color-blue-text
     width: 50%
     height: 10%
     text-align: center
@@ -83,8 +85,8 @@
     white-space: pre
 
 .footer
-  color: #023899
-  width: 100%
+  color: $global-color-blue-text
+  width: $global-width-full
   height: 15%
   display: grid
   grid-template-rows: 90% 10%
@@ -106,4 +108,4 @@
 
 .extra-footer
   height: auto
-  width: 100%
+  width: $global-width-full

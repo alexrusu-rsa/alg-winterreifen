@@ -1,26 +1,28 @@
+@import '_global'
+
 :host
-  background: #F6F6F6
+  background: $global-color-white
   height: 10%
-  width: 100%
-  display: block
+  width: inherit
+  display: inherit
 
   .mid
-    width: 80%
+    width: $global-side-wrapper-width
     margin: auto
-    height: 100%
+    height: $global-height-full
     display: grid
-    grid-template-columns: 33.33% 33.33% 33.33%
-    grid-template-rows: 100%
+    grid-template-columns: $global-three-equal-columns
+    grid-template-rows: $global-height-full
 
 .left-image
-  height: 100%
+  height: $global-height-full
   grid-column: 1
   display: flex
   justify-content: center
 
   img
     object-fit: contain
-    max-height: 100%
+    max-height: $global-height-full
 
 .mid-text
   grid-column: 2

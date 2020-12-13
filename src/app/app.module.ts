@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -10,6 +9,8 @@ import { CarHeaderComponent } from './components/car-header/car-header.component
 import { CarHeaderMidComponent } from './components/car-header-mid/car-header-mid.component';
 import { CarHeaderLastComponent } from './components/car-header-last/car-header-last.component';
 import { DimensionsHeaderComponent } from './components/dimensions-header/dimensions-header.component';
+import { PacketMainComponent } from './components/packet-main/packet-main.component';
+import { ImagesComponent } from './components/images/images.component';
 
 @NgModule({
   declarations: [
@@ -18,15 +19,17 @@ import { DimensionsHeaderComponent } from './components/dimensions-header/dimens
     CarHeaderComponent,
     CarHeaderMidComponent,
     CarHeaderLastComponent,
-    DimensionsHeaderComponent
+    DimensionsHeaderComponent,
+    PacketMainComponent,
+    ImagesComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

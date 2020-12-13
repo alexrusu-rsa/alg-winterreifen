@@ -1,20 +1,26 @@
 :host
-  width: 70%
-  margin: auto
-  height: 15%
-  padding: 1%
-  display: grid
-  grid-template-columns: 33.33% 33.33% 33.33%
-  grid-template-rows: 100%
-.left-image
-  grid-column: 1
+  background: #F6F6F6
+  height: 10%
+  width: 100%
   display: block
-  float: right
+
+  .mid
+    width: 80%
+    margin: auto
+    height: 100%
+    display: grid
+    grid-template-columns: 33.33% 33.33% 33.33%
+    grid-template-rows: 100%
+
+.left-image
+  height: 100%
+  grid-column: 1
+  display: flex
+  justify-content: center
+
   img
     object-fit: contain
     max-height: 100%
-    float: right
-    margin-right: 10%
 
 .mid-text
   grid-column: 2

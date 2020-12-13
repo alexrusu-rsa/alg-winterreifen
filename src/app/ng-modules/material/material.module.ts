@@ -5,6 +5,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSelectModule } from '@angular/material/select';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatDividerModule } from '@angular/material/divider';
 
 const MaterialComponents = [
   MatCardModule,
@@ -12,6 +13,7 @@ const MaterialComponents = [
   MatButtonModule,
   MatSelectModule,
   MatFormFieldModule,
+  MatDividerModule
 ];
 
 @NgModule({

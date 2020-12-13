@@ -1,3 +1,4 @@
+import { packets } from './mock/packets-mock';
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { DimensionsModalComponent } from './components/dimensions-modal/dimensions-modal.component';
@@ -9,6 +10,7 @@ import { DimensionsModalComponent } from './components/dimensions-modal/dimensio
 })
 export class AppComponent implements OnInit {
   title = 'dummy';
+  packets = packets;
 
   constructor(public dialog: MatDialog) {}
 

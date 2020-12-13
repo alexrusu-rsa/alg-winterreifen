@@ -1,13 +1,6 @@
 <alg-car-header></alg-car-header>
 <alg-dimensions-header></alg-dimensions-header>
-<div class="title">
-  <h1>Winterkompletträder: Paketauswahl</h1>
-</div>
-<div class="main">
-  <alg-packet-main class="pack" [packet]="packets[0]"></alg-packet-main>
-  <alg-packet-main class="pack" [packet]="packets[1]"></alg-packet-main>
-  <alg-packet-main class="pack" [packet]="packets[2]"></alg-packet-main>
-</div>
+<alg-packets [packets]="packets"></alg-packets>
 <div class="buttons">
   <button mat-raised-button>
     Der Kunde ist nicht interessiert

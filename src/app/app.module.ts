@@ -1,3 +1,5 @@
+import { PacketService } from './services/packet.service';
+import { DimensionsService } from './services/dimensions.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
@@ -11,6 +13,7 @@ import { CarHeaderLastComponent } from './components/car-header-last/car-header-
 import { DimensionsHeaderComponent } from './components/dimensions-header/dimensions-header.component';
 import { PacketMainComponent } from './components/packet-main/packet-main.component';
 import { ImagesComponent } from './components/images/images.component';
+import { PacketsComponent } from './components/packets/packets.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +25,7 @@ import { ImagesComponent } from './components/images/images.component';
     DimensionsHeaderComponent,
     PacketMainComponent,
     ImagesComponent,
+    PacketsComponent,
   ],
   imports: [
     BrowserModule,
@@ -29,7 +33,7 @@ import { ImagesComponent } from './components/images/images.component';
     BrowserAnimationsModule,
     MaterialModule,
   ],
-  providers: [],
+  providers: [DimensionsService,PacketService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

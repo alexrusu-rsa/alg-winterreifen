@@ -1,14 +1,15 @@
+@import '_global'
 :host
   height: 5%
-  width: 100%
+  width: $global-width-full
   display: flex
-  background: #023899
+  background: $global-color-blue-contrast
 
   .center
     align-self: center
-    width: 80%
+    width: $global-side-wrapper-width
     margin: auto
-    height: 100%
+    height: $global-height-full
     display: grid
     grid-template-columns: 33.33% 66.66%
     grid-template-rows: 100%
@@ -16,7 +17,7 @@
   .dimension-header-col1
     grid-row: 1
     grid-column: 1
-    color: white
+    color: $global-color-white
     h2
       margin: 0
 

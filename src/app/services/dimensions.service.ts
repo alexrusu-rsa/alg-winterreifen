@@ -1,11 +1,11 @@
-import { dimensionsMock } from './../mock/dimensions-mock';
+import { dimensionsMock } from '../mock/dimensions-mock';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable, Subject } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
-export class DimensionsServiceService {
+export class DimensionsService {
   private dimensions: string[];
   private selectedDimensionChange: BehaviorSubject<string>;
   selectedDimension: Observable<string>;

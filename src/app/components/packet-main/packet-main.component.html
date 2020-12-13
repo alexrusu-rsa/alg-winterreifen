@@ -1,4 +1,4 @@
-<div class="parent">
+<div [ngClass]="{'parent':true,'parentSelected':isSelected}">
   <div class="header">
     <h2>WKR-Paket</h2>
     <h1>{{packet.name}}</h1>
@@ -20,6 +20,6 @@
 
   <div class="extra-footer"></div>
 </div>
-<div class="circle">
-
+<div [ngClass]="{'circle':true,'circleSelected':isSelected}">
+  <span *ngIf="isSelected" [ngClass]="{'check':isSelected}">&#10003;</span>
 </div>

@@ -33,6 +33,7 @@
     "noUnusedParameters": true,
     "skipLibCheck": true,
     "baseUrl": "./",
+    "experimentalDecorators": true,
     "paths": {
       "@client": ["./"],
       "@client/*": ["./*"],

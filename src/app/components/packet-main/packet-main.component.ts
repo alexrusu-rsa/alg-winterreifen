@@ -1,17 +1,14 @@
 import { Packet } from './../../model/packet.model';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'alg-packet-main',
   templateUrl: './packet-main.component.html',
   styleUrls: ['./packet-main.component.sass'],
 })
-export class PacketMainComponent implements OnInit {
+export class PacketMainComponent {
   @Input()
   packet: Packet;
-  opacity;
-
-  constructor() {}
-
-  ngOnInit(): void {}
+  @Input()
+  isSelected: boolean = false;
 }

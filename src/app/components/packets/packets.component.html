@@ -1,0 +1,14 @@
+<div class="title">
+  <h1>Winterkompletträder: Paketauswahl</h1>
+</div>
+<div class="main">
+  <alg-packet-main (click)="selectPacket(packets[0])"
+    [ngClass]="{'pack':true,'selectedPack':selectedPacket===packets[0].name}" [packet]="packets[0]"
+    [isSelected]="selectedPacket===packets[0].name"></alg-packet-main>
+  <alg-packet-main (click)="selectPacket(packets[1])"
+    [ngClass]="{'pack':true,'selectedPack':selectedPacket===packets[1].name}" [packet]="packets[1]"
+    [isSelected]="selectedPacket===packets[1].name"></alg-packet-main>
+  <alg-packet-main (click)="selectPacket(packets[2])"
+    [ngClass]="{'pack':true,'selectedPack':selectedPacket===packets[2].name}" [packet]="packets[2]"
+    [isSelected]="selectedPacket===packets[2].name"></alg-packet-main>
+</div>

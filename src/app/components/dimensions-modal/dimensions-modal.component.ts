@@ -1,5 +1,5 @@
-import { DimensionsServiceService } from './../../services/dimensions-service.service';
-import { Component, OnInit } from '@angular/core';
+import { DimensionsService } from './../../services/dimensions.service';
+import { Component } from '@angular/core';
 import { MatDialogRef } from '@angular/material/dialog';
 
 @Component({
@@ -12,7 +12,7 @@ export class DimensionsModalComponent {
   selectedDimension: string;
 
   constructor(
-    private dimensionsServiceService: DimensionsServiceService,
+    private dimensionsServiceService: DimensionsService,
     public dialogRef: MatDialogRef<DimensionsModalComponent>
   ) {
     this.dimensions = dimensionsServiceService.getDimensions();

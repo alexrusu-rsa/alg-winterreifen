@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DimensionsServiceService } from 'src/app/services/dimensions-service.service';
+import { DimensionsService } from 'src/app/services/dimensions.service';
 
 @Component({
   selector: 'alg-dimensions-header',
@@ -10,13 +10,11 @@ export class DimensionsHeaderComponent implements OnInit {
   dimensions: string[];
   selectedDimension: string;
 
-  constructor(private dimensionsServiceService: DimensionsServiceService) {
+  constructor(private dimensionsServiceService: DimensionsService) {
     this.dimensions = dimensionsServiceService.getDimensions();
-    dimensionsServiceService.selectedDimension.subscribe(
-      (selectedDim) => {
-        this.selectedDimension = selectedDim;
-      }
-    );
+    dimensionsServiceService.selectedDimension.subscribe((selectedDim) => {
+      this.selectedDimension = selectedDim;
+    });
   }
   ngOnInit(): void {}
 

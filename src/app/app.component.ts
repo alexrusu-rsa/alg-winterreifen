@@ -27,7 +27,13 @@ export class AppComponent implements OnInit, OnDestroy {
 
   openDialog(): void {
     const dialogRef = this.dialog.open(DimensionsModalComponent, {
-      data: { dialogRef: this.dialog }
+      data: { dialogRef: this.dialog },
+      height: '400px',
+      width: '900px',
+      panelClass: 'modalDialog',
+      backdropClass: 'backdropBackground',
+      disableClose: true,
+      hasBackdrop: true
     });
 
     this.subscription = dialogRef.afterClosed().subscribe(() => {

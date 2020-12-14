@@ -29,6 +29,7 @@
       vertical-align: middle
 
   .dimension-header-col2
+    display: table
     overflow: hidden
     height: 80%
     border-radius: 4px
@@ -39,13 +40,14 @@
     grid-column-end: 3
     background: white
 
-::ng-deep
-  .mat-form-field-appearance-fill .mat-form-field-flex
-    padding: 0
+::ng-deep .mat-form-field-flex > .mat-form-field-infix
+  padding: 0.4em 0px !important
+::ng-deep .mat-form-field-label-wrapper
+  top: -1.5em
 
-  .mat-form-field-infix
-    padding: 0
-    border-top: 0
+::ng-deep .mat-form-field-appearance-outline.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label
+  transform: translateY(-1.1em) scale(.75)
+  width: 133.33333%
 
     // .mat-select-value-text
     //   width: 33.33%!important

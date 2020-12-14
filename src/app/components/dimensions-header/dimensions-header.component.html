@@ -2,7 +2,7 @@
   <div class="dimension-header-col1">
     <h1 class="mat-headline">Gewählte Reifendimensionen</h1>
   </div>
-  <mat-form-field appearance="fill" class="dimension-header-col2">
+  <mat-form-field appearance="fill" class="dimension-header-col2 mat-display-2">
     <mat-select [(value)]="selectedDimension" (selectionChange)="setSelectedDimension()">
       <mat-option *ngFor="let dimension of dimensions" [value]="dimension">
         {{dimension}}

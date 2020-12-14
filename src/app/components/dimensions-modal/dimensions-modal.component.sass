@@ -1,0 +1,25 @@
+@import '_global'
+:host
+  width: $global-width-full
+  height: 80%
+  display: grid
+  margin:auto
+  grid-template-rows: 40% 60%
+  grid-template-columns: 100%
+
+  h1
+    grid-row: 1
+    grid-column: 1
+    width: 50%
+    margin: auto
+    margin-bottom: 0
+
+  .mat-form-field
+    grid-row: 2
+    grid-column: 1
+    width: 50%
+    margin: auto
+
+
+::ng-deep .mat-dialog-container
+    background: $global-color-gray-contrast!important

@@ -1,25 +1,47 @@
-<div [ngClass]="{'parent':true,'parentSelected':isSelected}">
-  <div class="header">
-    <h2>WKR-Paket</h2>
-    <h1>{{packet.name}}</h1>
-  </div>
-
-  <div class="main">
-    <h3 class="description">
+<mat-card>
+  <mat-card-header>
+    <div class="vertical-align">
+      <h1 class="mat-display-2">WKR-Paket</h1>
+      <h1 class="mat-display-4">{{packet.name}}</h1>
+    </div>
+  </mat-card-header>
+  <mat-card-content>
+    <h1 class="mat-display-1">
       {{packet.description}}
-    </h3>
+    </h1>
     <alg-images [packet]="packet"></alg-images>
-  </div>
+  </mat-card-content>
+  <mat-card-footer>
+    <mat-divider></mat-divider>
+    <h1 class="mat-display-4">{{packet.price}} €</h1>
+    <h1 class="mat-body">Stückpreis</h1>
+  </mat-card-footer>
+</mat-card>
+<div class="align-button" [ngClass]="{'parentSelected':isSelected}">
+  <button mat-fab>
+    <span *ngIf="isSelected" [ngClass]="{'check':isSelected,'mat-display-4':isSelected}">&#10003;</span></button>
+</div>
+<!-- <div [ngClass]="{'parent':true,'parentSelected':isSelected,'parent0':nr===0,'parent1':nr===1,'parent2':nr===2}">
+<div class="header">
+  <h1 class="mat-display-1">WKR-Paket</h1>
+  <h1 class="mat-display-4">{{packet.name}}</h1>
+</div>
 
+<div class="main">
+  <h1>
+    {{packet.description}}
+  </h1>
+  <alg-images [packet]="packet"></alg-images>
+</div>
+
+<div class="footer">
   <mat-divider></mat-divider>
+  <h1 class="mat-display-4">{{packet.price}} €</h1>
+  <h1>Stückpreis</h1>
+</div>
 
-  <div class="footer">
-    <h1>{{packet.price}} €</h1>
-    <h4>Stückpreis</h4>
-  </div>
-
-  <div class="extra-footer"></div>
+<div class="extra-footer"></div>
 </div>
 <div [ngClass]="{'circle':true,'circleSelected':isSelected}">
-  <span *ngIf="isSelected" [ngClass]="{'check':isSelected}">&#10003;</span>
-</div>
+<span *ngIf="isSelected" [ngClass]="{'check':isSelected}">&#10003;</span>
+</div> -->

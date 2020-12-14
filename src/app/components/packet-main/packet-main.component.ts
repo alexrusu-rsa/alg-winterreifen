@@ -11,4 +11,6 @@ export class PacketMainComponent {
   packet: Packet;
   @Input()
   isSelected: boolean = false;
+  @Input()
+  nr:number;
 }

@@ -1,7 +1,7 @@
 @import '_global'
 :host
   width: $global-side-wrapper-width
-  height: 60%
+  height: 65%
   display: block
   margin: auto
   margin-top: 2%
@@ -9,10 +9,9 @@
   .title
     width: $global-width-full
     margin: auto
+    color: $global-color-blue-text
     h1
-      color: $global-color-blue-text
-      font-size: 50px
-      font-weight: bold
+      margin: 0!important
 
   .main
     display: grid
@@ -24,9 +23,13 @@
 
   .pack:hover
     opacity: 1
+    border: 4px solid $global-color-blue-contrast
+    border-radius: 34px
 
   .selectedPack
     opacity: 1!important
+    border: 4px solid $global-color-blue-contrast
+    border-radius: 34px
 
   .pack
     opacity: 0.3

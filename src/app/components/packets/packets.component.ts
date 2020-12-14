@@ -12,6 +12,7 @@ export class PacketsComponent implements OnInit {
   @Input()
   packets: Packet[];
   selectedPacket: string;
+  iterator: number[] = [0, 1, 2];
 
   constructor(private packetService: PacketService) {
     packetService.selectedPacket.subscribe((selectedPacket) => {

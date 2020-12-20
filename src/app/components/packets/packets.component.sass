@@ -39,14 +39,14 @@
     object-fit: contain
     margin-bottom: 0
 
-  .pack:nth-child(1)
-    height: 80%
-    vertical-align: bottom
-    margin-left: 0
+  $elements: 3
+  @for $i from 1 to $elements + 1
+    .pack:nth-child(#{$i})
+      height: calc(100% - (#{3-$i} * 10%))!important
+      vertical-align: bottom
 
-  .pack:nth-child(2)
-    height: 90%
-    vertical-align: bottom
+  .pack:nth-child(1)
+    margin-left: 0
 
   .pack:nth-child(3)
     margin-right: 0

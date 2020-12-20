@@ -1,0 +1,13 @@
+@import '~@angular/material/theming'
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap')
+
+$custom-typography: mat-typography-config($font-family: 'Open Sans, sans-serif', $display-4: mat-typography-level(32px, 45px, 700), $display-3: mat-typography-level(20px, 25px, 700), $display-2: mat-typography-level(14px, 15px, 700), $display-1: mat-typography-level(12px, 18px, 600), $headline: mat-typography-level(12px, 10px, 400), $title: mat-typography-level(12px, 10px, 400))
+
+@include mat-base-typography($custom-typography)
+
+@include mat-checkbox-typography($custom-typography)
+
+@include angular-material-typography($custom-typography)
+
+@include mat-core($custom-typography)

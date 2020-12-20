@@ -7,7 +7,7 @@ export const packets: Packet[] = [
     fuel: 'F',
     weather: 'E',
     noise: 76,
-    price: '130.-',
+    price: '130,-',
   },
   {
     name: 'M',
@@ -15,7 +15,7 @@ export const packets: Packet[] = [
     fuel: 'D',
     weather: 'C',
     noise: 69,
-    price: '150.-',
+    price: '150,-',
   },
   {
     name: 'L',
@@ -24,6 +24,6 @@ export const packets: Packet[] = [
     fuel: 'C',
     weather: 'B',
     noise: 67,
-    price: '170.-',
+    price: '170,-',
   },
 ];

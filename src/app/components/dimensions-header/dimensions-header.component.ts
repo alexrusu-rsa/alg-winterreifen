@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
+import { Subscription } from 'rxjs';
 import { DimensionsService } from 'src/app/services/dimensions.service';
 
 @Component({
@@ -6,17 +7,23 @@ import { DimensionsService } from 'src/app/services/dimensions.service';
   templateUrl: './dimensions-header.component.html',
   styleUrls: ['./dimensions-header.component.sass'],
 })
-export class DimensionsHeaderComponent implements OnInit {
+export class DimensionsHeaderComponent implements OnDestroy {
   dimensions: string[];
   selectedDimension: string;
+  subscription: Subscription;
 
   constructor(private dimensionsServiceService: DimensionsService) {
     this.dimensions = dimensionsServiceService.getDimensions();
-    dimensionsServiceService.selectedDimension.subscribe((selectedDim) => {
-      this.selectedDimension = selectedDim;
-    });
+    this.subscription = dimensionsServiceService.selectedDimension.subscribe(
+      (selectedDim) => {
+        this.selectedDimension = selectedDim;
+      }
+    );
   }
-  ngOnInit(): void {}
+
+  ngOnDestroy(): void {
+    this.subscription.unsubscribe();
+  }
 
   setSelectedDimension(): void {
     this.dimensionsServiceService.setSelectedDimension(this.selectedDimension);

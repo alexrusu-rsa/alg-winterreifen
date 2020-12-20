@@ -45,7 +45,6 @@
       margin: auto !important
       background: $global-color-white!important
 
-
     ::ng-deep .mat-form-field-flex > .mat-form-field-infix
       padding: 0px !important
       border-top: 0px !important
@@ -65,10 +64,16 @@
       padding: 0
 
     ::ng-deep .mat-select-value-text
-      float: right
+      display: grid
+      grid-template-rows: 100%
+      width: 100%
+      grid-template-columns: 33.33% 33.33% 33.33%
+      span
+        grid-column: 3
+        text-align: center
 
     ::ng-deep .mat-select-arrow-wrapper
-        transform: none!important
+      transform: none!important
 
     ::ng-deep .mat-form-field-underline
       display: none

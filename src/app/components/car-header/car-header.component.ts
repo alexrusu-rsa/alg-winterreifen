@@ -12,6 +12,6 @@ export class CarHeaderComponent implements OnInit {
 
   ngOnInit(): void {
     this.img = fiesta.img;
-    console.log(this.img);
+    // console.log(this.img);
   }
 }

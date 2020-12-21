@@ -14,7 +14,7 @@ export class PacketService {
   }
 
   setSelectedPacket(selectedPacket: string): void {
-    console.log("Selected: ",selectedPacket)
+    // console.log("Selected: ",selectedPacket)
     this.selectedPacketChange.next(selectedPacket);
   }
 

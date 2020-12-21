@@ -37,7 +37,7 @@ export class AppComponent implements OnInit, OnDestroy {
     });
 
     this.subscription = dialogRef.afterClosed().subscribe(() => {
-      console.log('The dialog was closed');
+      // console.log('The dialog was closed');
     });
   }
 }

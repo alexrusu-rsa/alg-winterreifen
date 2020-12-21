@@ -1,13 +1,39 @@
 @import '~@angular/material/theming'
+@import  '_global'
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap')
 
-$custom-typography: mat-typography-config($font-family: 'Open Sans, sans-serif', $display-4: mat-typography-level(32px, 45px, 700), $display-3: mat-typography-level(20px, 25px, 700), $display-2: mat-typography-level(14px, 15px, 700), $display-1: mat-typography-level(12px, 18px, 600), $headline: mat-typography-level(12px, 10px, 400), $title: mat-typography-level(12px, 10px, 400))
+$fam-font: 'Open Sans, sans-serif'
 
-@include mat-base-typography($custom-typography)
+$custom-typography: mat-typography-config($font-family: $fam-font, $display-4: mat-typography-level(32px, 45px, 700), $display-3: mat-typography-level(20px, 25px, 700), $display-2: mat-typography-level(14px, 15px, 700), $display-1: mat-typography-level(12px, 18px, 600), $headline: mat-typography-level(12px, 12px, 600), $title: mat-typography-level(12px, 12px, 400))
 
-@include mat-checkbox-typography($custom-typography)
+$custom-typography-wide: mat-typography-config($font-family: $fam-font, $display-4: mat-typography-level(40px, 50px, 700), $display-3: mat-typography-level(26px, 30px, 700), $display-2: mat-typography-level(20px, 20px, 700), $display-1: mat-typography-level(14px, 18px, 700), $headline: mat-typography-level(16px, 14px, 700), $title: mat-typography-level(16px, 14px, 500))
 
-@include angular-material-typography($custom-typography)
+$custom-typography-full: mat-typography-config($font-family: $fam-font, $display-4: mat-typography-level(56px, 60px, 700), $display-3: mat-typography-level(32px, 28px, 700), $display-2: mat-typography-level(25px, 24px, 700), $display-1: mat-typography-level(20px, 26px, 700), $headline: mat-typography-level(18px, 18px, 700), $title: mat-typography-level(18px, 18px, 600))
 
-@include mat-core($custom-typography)
+@media (max-height: $global-common-HD-height + 1)
+  @include mat-base-typography($custom-typography)
+
+  @include mat-checkbox-typography($custom-typography)
+
+  @include angular-material-typography($custom-typography)
+
+  @include mat-core($custom-typography)
+
+@media (min-height: $global-common-HD-height+1) and (max-height: $global-full-HD-height - 1)
+  @include mat-base-typography($custom-typography-wide)
+
+  @include mat-checkbox-typography($custom-typography-wide)
+
+  @include angular-material-typography($custom-typography-wide)
+
+  @include mat-core($custom-typography-wide)
+
+@media (min-height: $global-full-HD-height)
+  @include mat-base-typography($custom-typography-full)
+
+  @include mat-checkbox-typography($custom-typography-full)
+
+  @include angular-material-typography($custom-typography-full)
+
+  @include mat-core($custom-typography-full)

@@ -21,3 +21,22 @@ $global-color-grey-dialog: #00000029
 
 $global-height-5em: 5em
 
+$global-common-HD-width: 1366px
+$global-full-HD-width: 1920px
+$global-wide-width: 1440px
+
+$global-common-HD-height: 768px
+$global-full-HD-height: 1080px
+$global-wide-height: 900px
+
+@mixin HD($height)
+  @media (max-height: $global-common-HD-height + 1)
+    height: ($height)
+
+@mixin Wide($height)
+    @media (min-height: $global-common-HD-height+1) and (max-height: $global-full-HD-height - 1)
+      height: calc(#{$height})
+
+@mixin FullHD($height)
+    @media (min-height: $global-full-HD-height)
+      height: calc(#{$height})

@@ -1,23 +1,10 @@
 const express = require("express");
-
-const _port = 4100;
-const _app_folder = 'dist/dummy';
+const path = require("path");
 const app = express();
 
-
-// ---- SERVE STATIC FILES ---- //
-app.get('*.*', express.static(_app_folder, {
-  maxAge: '1y'
-}));
-
-// ---- SERVE APLICATION PATHS ---- //
-app.all('*', function (req, res) {
-  res.status(200).sendFile(`/`, {
-    root: _app_folder
-  });
+app.use(express.static(__dirname + '/dist/dummy'));
+app.get('/*', function (req, res) {
+  res.sendFile(path.join(__dirname + '/dist/dummy/index.html'));
 });
 
-// ---- START UP THE NODE SERVER  ----
-app.listen(_port, function () {
-  console.log("Node Express server for " + app.name + " listening on http://localhost:" + _port);
-});
+app.listen(process.env.PORT || 8080);

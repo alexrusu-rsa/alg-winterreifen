@@ -11,7 +11,7 @@ $custom-typography-wide: mat-typography-config($font-family: $fam-font, $display
 
 $custom-typography-full: mat-typography-config($font-family: $fam-font, $display-4: mat-typography-level(56px, 60px, 700), $display-3: mat-typography-level(32px, 28px, 700), $display-2: mat-typography-level(25px, 24px, 700), $display-1: mat-typography-level(20px, 26px, 700), $headline: mat-typography-level(18px, 18px, 700), $title: mat-typography-level(18px, 18px, 600))
 
-@media (max-height: $global-common-HD-height + 1)
+@media screen and (max-height: $global-common-HD-height + 1)
   @include mat-base-typography($custom-typography)
 
   @include mat-checkbox-typography($custom-typography)
@@ -20,7 +20,7 @@ $custom-typography-full: mat-typography-config($font-family: $fam-font, $display
 
   @include mat-core($custom-typography)
 
-@media (min-height: $global-common-HD-height+1) and (max-height: $global-full-HD-height - 1)
+@media screen and (min-height: $global-common-HD-height + 1) and (max-height: $global-full-HD-height)
   @include mat-base-typography($custom-typography-wide)
 
   @include mat-checkbox-typography($custom-typography-wide)
@@ -29,7 +29,7 @@ $custom-typography-full: mat-typography-config($font-family: $fam-font, $display
 
   @include mat-core($custom-typography-wide)
 
-@media (min-height: $global-full-HD-height)
+@media screen and (min-height: $global-full-HD-height)
   @include mat-base-typography($custom-typography-full)
 
   @include mat-checkbox-typography($custom-typography-full)

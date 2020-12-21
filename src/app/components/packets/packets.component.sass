@@ -42,12 +42,12 @@
     ::ng-deep
       .mat-card-header, .mat-card-footer
         @include HD($global-height-5em)
-        @include Wide($global-height-5em * 1.4)
+        @include Wide(calc(#{$global-height-5em * 1.4}))
         @include FullHD($global-height-5em * 1.5)
 
       .mat-card-content
         @include HD(calc(100% - 2% - #{$global-height-5em} * 2))
-        @include Wide(calc(100% - #{$global-height-5em * 1.4} * 2))
+        @include Wide(calc(100% - #{$global-height-5em * 1.4} * 2 ))
         @include FullHD(calc(100% - 2% - #{$global-height-5em * 1.5} * 2))
 
         h1

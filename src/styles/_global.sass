@@ -30,13 +30,13 @@ $global-full-HD-height: 1080px
 $global-wide-height: 900px
 
 @mixin HD($height)
-  @media (max-height: $global-common-HD-height + 1)
+  @media screen and (max-height: $global-common-HD-height + 1)
     height: ($height)
 
 @mixin Wide($height)
-    @media (min-height: $global-common-HD-height+1) and (max-height: $global-full-HD-height - 1)
+    @media screen and (min-height: $global-common-HD-height + 1) and (max-height: $global-full-HD-height )
       height: calc(#{$height})
 
 @mixin FullHD($height)
-    @media (min-height: $global-full-HD-height)
+    @media screen and (min-height: $global-full-HD-height)
       height: calc(#{$height})

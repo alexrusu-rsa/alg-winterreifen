@@ -39,11 +39,27 @@
     object-fit: contain
     margin-bottom: 0
 
+    ::ng-deep
+      .mat-card-header, .mat-card-footer
+        height: $global-height-5em
+
+      .mat-card-content
+        height: calc(100% - 2% - #{$global-height-5em} * 2)
+
+        h1
+          height: $global-height-5em
+
   $elements: 3
   @for $i from 1 to $elements + 1
     .pack:nth-child(#{$i})
       height: calc(100% - (#{3-$i} * 10%))!important
       vertical-align: bottom
+
+      ::ng-deep
+        .images
+          height: $global-height-5em
+          margin-bottom: calc( ( #{$i - 1} * 10% ) / 2)
+          margin-top: calc( ( #{$i - 1} * 10% ) / 2)
 
   .pack:nth-child(1)
     margin-left: 0
